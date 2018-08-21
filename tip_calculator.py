@@ -1,3 +1,7 @@
+def calculate_tip(tip_percentage):
+    tip_amount = bill_amount * ( tip_percentage / 100 )
+    return tip_amount
+
 while True:
     try:
         bill_amount = float(input("What is the bill amount? "))
@@ -12,7 +16,7 @@ while True:
         print("Your input must be a valid number!")
         continue
 
-tip_amount = bill_amount * ( tip_percentage / 100 )
+tip_amount = calculate_tip(tip_percentage)
 bill_with_tip = bill_amount + tip_amount
 
 print( f"The tip is ${tip_amount:.2f}" )
