@@ -2,6 +2,11 @@ while True:
     try:
         bill_amount = float(input("What is the bill amount? "))
         tip_percentage = float(input("What is the tip amount? "))
+
+        if bill_amount < 0 or tip_percentage < 0:
+            print("You can not enter negative numbers!")
+            continue
+
         break
     except:
         print("Your input must be a valid number!")
